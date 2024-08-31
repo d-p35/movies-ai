@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Next?"
+title: "Discover Your Next Favorite Movie with StreamPicks!"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Nextplate and Next. Build lightning-fast static sites with ease and flexibility."
+description: "Unlock a world of personalized movie recommendations and instant streaming with StreamPicks. Find the perfect film for any mood and start watching instantly, all from one platform."
 button:
   enable: true
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/nextplate"
+  label: "Get your first month free!"
+  link: "https://www.streampicks.com/signup"
 ---

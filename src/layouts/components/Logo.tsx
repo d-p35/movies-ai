@@ -39,14 +39,13 @@ const Logo = ({ src, lang }: { src?: string; lang: string }) => {
     <Link href={slugSelector(lang, "")} className="navbar-brand inline-block">
       {logoPath ? (
         <Image
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
+          width={60}
+          height={60}
           src={logoPath}
           alt={title}
           priority
           style={{
-            height: logo_height.replace("px", "") + "px",
-            width: logo_width.replace("px", "") + "px",
+
           }}
         />
       ) : logo_text ? (
