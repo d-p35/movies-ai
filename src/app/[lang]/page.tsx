@@ -10,6 +10,9 @@ import { Button, Feature } from "@/types";
 import Link from "next/link";
 import path from "path";
 import { FaCheck } from "react-icons/fa";
+import { currentUser } from '@clerk/nextjs/server'
+import { redirect } from 'next/navigation'
+import { auth } from '@clerk/nextjs/server'
 
 // remove dynamicParams
 export const dynamicParams = false;
@@ -21,7 +24,14 @@ export async function generateStaticParams() {
   }));
 }
 
-const Home = ({ params }: { params: { lang: string } }) => {
+const Home = async ({ params }: { params: { lang: string } }) => {
+  // const { userId }: { userId: string | null } = auth()
+
+
+  // if (userId){
+  //   redirect('/dashboard')
+  // }
+
   const lang = params.lang;
   const language = languages.find(
     (language) => language.languageCode === lang,

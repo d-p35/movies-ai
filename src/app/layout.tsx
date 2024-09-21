@@ -1,6 +1,7 @@
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import "@/styles/main.scss";
+import { ClerkProvider, SignInButton } from "@clerk/nextjs";
 
 export default function RootLayout({
   children,
@@ -12,8 +13,9 @@ export default function RootLayout({
   const sf = theme.fonts.font_family.secondary;
 
   return (
-    <html suppressHydrationWarning={true} lang="en">
-      <head>
+    <ClerkProvider> 
+      <html suppressHydrationWarning={true} lang="en">
+        <head>
         {/* responsive meta */}
         <meta
           name="viewport"
@@ -52,5 +54,6 @@ export default function RootLayout({
 
       <body suppressHydrationWarning={true}>{children}</body>
     </html>
+    </ClerkProvider>
   );
 }
